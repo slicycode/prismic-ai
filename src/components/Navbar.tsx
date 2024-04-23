@@ -13,7 +13,7 @@ type NavbarProps = {
 export default function Navbar({ settings }: NavbarProps) {
   return (
     <nav className="p-4 md:p-6" aria-label="Main">
-      <div className="mx-auto flex max-w-6xl flex-col justify-between py-2 font-medium text-white md:flex-row md:items-center">
+      <div className="flex items-center justify-between max-w-6xl py-2 mx-auto font-medium text-white">
         <Link href="/">
           <WordMark />
           <span className="sr-only">Glisten.ai Home Page</span>
@@ -30,7 +30,7 @@ export default function Navbar({ settings }: NavbarProps) {
             return (
               <li key={item.label}>
                 <PrismicNextLink
-                  className="inline-flex min-h-11 items-center"
+                  className="inline-flex items-center min-h-11"
                   field={item.link}
                 >
                   {item.label}
